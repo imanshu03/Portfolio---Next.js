@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "firstName": "imanshu",
+    "lastName": "rathore",
+    "designation": [
+      "Frontend Engineer",
+      "React.js Developer",
+      "JavaScript Developer"
+    ],
+    "description": [
+      "I'm a software engineer with more than 2 years of experience in software development. I believe in developing modern, reactive and user friendly web applications using the latest technologies.",
+      "I believe a perfect blend of software design is one, where the goals and needs are accounted for in an elegant, efficient and robust design of the software.",
+      "If I am not working then there is a high chance that I am busy potting pool balls with my cue or leading my player for a Winner Winner Chicken Dinner!",
+      "Scroll down to know more about me!"
+    ],
+    "resume": "https://drive.google.com/uc?id=11rcKwVOYSRMLk8Hz1wmp2TVn3OfGOOqg&export=download",
+    "socialLinks": [
+      {
+        "icon": "mail",
+        "value": "imanshurathore@gmail.com",
+        "link": true,
+        "href": "mailto:imanshurathore@gmail.com"
+      },
+      {
+        "icon": "mobile",
+        "value": "7837770661",
+        "link": false
+      },
+      {
+        "icon": "location",
+        "value": "Chandigarh, India",
+        "link": false
+      },
+      {
+        "icon": "linkedin",
+        "value": "linkedin.com/in/imanshurathore/",
+        "link": true,
+        "href": "https://www.linkedin.com/in/imanshurathore/",
+        "target": "_blank"
+      }
+    ]
+  },
+  "skills": {
+    "technical": {}
+  }
+}

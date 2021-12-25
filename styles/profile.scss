@@ -1,0 +1,164 @@
+@import './variables.scss';
+
+.profile {
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+
+  &-section {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    h3,
+    h1 {
+      margin: 0;
+    }
+
+    .greeting {
+      font-size: $font3;
+      font-weight: $light;
+      color: $grey;
+      margin-bottom: 0.6rem;
+    }
+
+    .designation {
+      letter-spacing: 1px;
+      color: $black;
+      font-weight: $light;
+      font-size: $font8;
+    }
+
+    .first-name,
+    .last-name {
+      color: $steelBlue;
+      font-size: $font1;
+      text-transform: uppercase;
+    }
+
+    .about {
+      text-align: justify;
+      color: $grey;
+      font-size: $font3;
+      font-weight: $light;
+      line-height: 2;
+
+      span {
+        display: block;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .dw-resume {
+      outline: none;
+      border: 1px solid $steelBlue;
+      background-color: transparent;
+      color: $steelBlue;
+      transition: 0.2s all ease-in-out;
+      cursor: pointer;
+      text-decoration: none;
+      height: 3.2rem;
+      width: 12rem;
+
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      justify-content: center;
+
+      .loader {
+        svg {
+          width: 40 !important;
+          height: 40 !important;
+          fill: $steelBlue;
+        }
+      }
+
+      @media (hover: hover) {
+        & {
+          color: $grey;
+          border-color: $grey;
+        }
+        &:hover {
+          border-color: $steelBlue;
+          color: $white;
+          background-color: $steelBlue;
+        }
+        &:active {
+          transform: scale(0.9);
+        }
+      }
+    }
+  }
+
+  .middle {
+    padding: 2rem 0;
+  }
+
+  &-bottom {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+
+    .details-item {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      cursor: pointer;
+      padding: 1rem 0;
+
+      svg {
+        margin-right: 8px;
+        * {
+          fill: $steelBlue;
+        }
+      }
+
+      .value {
+        text-decoration: none;
+        color: $grey;
+      }
+
+      @media (hover: hover) {
+        & {
+          svg {
+            * {
+              fill: $grey;
+            }
+          }
+        }
+        &:hover {
+          svg * {
+            fill: $steelBlue;
+          }
+          .value {
+            color: $steelBlue;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 848px) {
+  .about {
+    span {
+      margin-bottom: 0 !important;
+    }
+  }
+  .middle {
+    padding: 0 !important;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .profile-section {
+    justify-content: center !important;
+  }
+  .profile-bottom {
+    justify-content: center !important;
+  }
+}
