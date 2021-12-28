@@ -3,11 +3,12 @@ import { ObserverContext } from '../ObserverStore';
 import SectionHeader from './SubComponents/SectionHeader';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import ProfileImg from '../Assets/profile.jpg';
-import MailIcon from '../Assets/envelope-fill.svg';
-import MobileIcon from '../Assets/telephone-fill.svg';
-import LocationIcon from '../Assets/geo-alt-fill.svg';
-import LinkedinIcon from '../Assets/linkedin.svg';
+import MailIcon from '../Assets/MailIcon';
+import MobileIcon from '../Assets/MobileIcon';
+import LocationIcon from '../Assets/LocationIcon';
+import LinkedinIcon from '../Assets/LinkedinIcon';
 import DownloadIcon from '../Assets/file-earmark-arrow-down.svg';
+import GithubIcon from '../Assets/GithubIcon';
 import Loader from 'react-loader-spinner';
 import FragmentLeft from './FragmentLeft';
 
@@ -16,6 +17,7 @@ const SvgIcons = {
   linkedin: <LinkedinIcon className="details-icon" />,
   mobile: <MobileIcon className="details-icon" />,
   location: <LocationIcon className="details-icon" />,
+  github: <GithubIcon className="details-icon" />,
 };
 
 const downloadResume = function (resume) {
@@ -99,17 +101,20 @@ const Profile = ({ data }) => {
         <FragmentLeft className="profile-bottom">
           {socialLinks.map((item, idx) => (
             <div className="details-item" key={idx}>
-              {SvgIcons[item.icon]}
               {item.link ? (
                 <a
                   href={item.href}
                   className="value"
                   target={item.target || '_self'}
                 >
-                  {item.value}
+                  {SvgIcons[item.icon]}{' '}
+                  <span className="value-text">{item.value}</span>
                 </a>
               ) : (
-                <span className="value">{item.value}</span>
+                <div className="value">
+                  {SvgIcons[item.icon]}{' '}
+                  <span className="value-text">{item.value}</span>
+                </div>
               )}
             </div>
           ))}

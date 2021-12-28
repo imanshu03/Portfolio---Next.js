@@ -293,7 +293,6 @@ a {
             fill: $color1;
           }
         }
-        width: 40%;
       }
     }
 
@@ -331,10 +330,16 @@ a {
   }
   .profile {
     &-bottom {
-      flex-flow: column !important;
-      align-items: flex-start !important;
-
       .details-item {
+        .value {
+          svg {
+            width: 1.4rem;
+            height: 1.4rem;
+          }
+          .value-text {
+            display: none;
+          }
+        }
         width: fit-content;
       }
     }

@@ -94,24 +94,24 @@
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
 
     .details-item {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
       cursor: pointer;
       padding: 1rem 0;
       font-weight: 300;
 
-      svg {
-        margin-right: 8px;
-      }
-
       .value {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
         text-decoration: none;
         color: $black;
+
+        svg {
+          margin-right: 8px;
+        }
       }
 
       @media (hover: hover) {
