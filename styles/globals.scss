@@ -7,7 +7,6 @@ body,
   width: 100%;
   height: 100%;
   margin: 0;
-  padding: 0;
   font-family: 'Ubuntu', sans-serif;
   background-color: $lightGrey;
   scroll-behavior: smooth;
@@ -28,6 +27,8 @@ a {
   flex-flow: row wrap;
   box-sizing: border-box;
   justify-content: center;
+  background-color: $white;
+  padding: 1rem 0;
 
   &:nth-child(odd) {
     background-color: $white;
@@ -45,7 +46,6 @@ a {
     flex: 0.4;
     box-sizing: border-box;
     padding: 1rem;
-
     transition: 0.6s all ease-out;
 
     h1 {
@@ -85,7 +85,7 @@ a {
   height: 100%;
 }
 
-.btt-btn {
+.back-to-top-cta {
   background-color: $white !important;
   display: block;
   padding: 2rem 0;
@@ -122,7 +122,8 @@ a {
 .t-wrapper {
   position: relative;
   opacity: 0;
-  transition: 0.6s all ease-in-out;
+  transition: 0.6s opacity ease-in-out, 0.6s left ease-in-out,
+    0.6s top ease-in-out;
 }
 
 .t-left-wrapper {
@@ -146,44 +147,92 @@ a {
 }
 
 @media (max-width: 810px) {
-  .section .picture {
-    width: 10rem;
+  .t-left-wrapper {
+    left: 0rem;
+    top: -2rem;
   }
 
-  .section-header {
-    flex: 1;
-    margin: 1rem 0;
+  .t-top-wrapper {
+    top: 0rem;
+    left: 2rem;
+  }
+
+  .t-left-transition {
+    opacity: 1;
+    top: 0;
+    left: 0;
+  }
+
+  .t-top-transition {
+    opacity: 1;
+    top: 0;
+    left: 0;
+  }
+
+  .section {
+    padding: 0;
+    &-header {
+      flex: 1;
+      margin: 1rem 0;
+
+      .picture {
+        width: 10rem;
+      }
+    }
   }
 
   .full-height {
     height: fit-content;
   }
 
-  .profile {
+  .profile,
+  .skills,
+  .experience {
     padding: 0 1rem;
-    width: auto;
+    width: 100%;
     flex: unset;
-    right: 0;
-    top: 2rem;
-    xw &-bottom {
+  }
+  .profile {
+    &-bottom {
       margin-top: 1rem;
-      align-items: center !important;
 
       .details-item {
-        width: 50%;
+        width: 40%;
       }
     }
 
     &-section {
       align-items: center !important;
+
+      .dw-resume {
+        align-self: flex-start;
+      }
+    }
+
+    .middle {
+      align-items: flex-start i !important;
+    }
+  }
+
+  .experience {
+    &-wrapper {
+      &-content {
+        .r-list {
+          padding-left: 1rem;
+        }
+      }
     }
   }
 }
 
 @media (max-width: 500px) {
+  .section-body {
+    padding: 0 0.5rem;
+  }
   .profile {
     &-bottom {
       flex-flow: column !important;
+      align-items: flex-start !important;
 
       .details-item {
         width: fit-content;
@@ -193,3 +242,6 @@ a {
 }
 
 @import './profile.scss';
+@import './skills.scss';
+@import './experience.scss';
+@import './timeline.scss';

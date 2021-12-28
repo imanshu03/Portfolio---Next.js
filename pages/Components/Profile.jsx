@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import { ObserverContext } from '../ObserverStore';
-import SectionHeader from './SectionHeader';
+import SectionHeader from './SubComponents/SectionHeader';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import ProfileImg from '../Assets/profile.jpg';
 import MailIcon from '../Assets/envelope-fill.svg';
@@ -71,7 +71,7 @@ const Profile = ({ data }) => {
             <Cursor />
           </h3>
         </FragmentLeft>
-        <FragmentLeft className="profile-section middle">
+        <FragmentLeft className="profile-section">
           <p className="about">
             {description.map((e, idx) => (
               <span key={idx}>{e}</span>

@@ -3,7 +3,7 @@
 .profile {
   flex-flow: column wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 
   &-section {
     width: 100%;
@@ -92,10 +92,6 @@
     }
   }
 
-  .middle {
-    padding: 2rem 0;
-  }
-
   &-bottom {
     display: flex;
     flex-flow: row wrap;
@@ -148,17 +144,5 @@
     span {
       margin-bottom: 0 !important;
     }
-  }
-  .middle {
-    padding: 0 !important;
-  }
-}
-
-@media screen and (max-width: 810px) {
-  .profile-section {
-    justify-content: center !important;
-  }
-  .profile-bottom {
-    justify-content: center !important;
   }
 }

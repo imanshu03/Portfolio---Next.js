@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useRef } from 'react';
 import { ObserverContext } from '../ObserverStore';
 
-const FragmentLeft = ({ children, className }) => {
+const FragmentLeft = ({ children, className = '', tagName = '' }) => {
   const ref = useRef(null);
   const observer = useContext(ObserverContext);
 
@@ -10,6 +10,19 @@ const FragmentLeft = ({ children, className }) => {
       observer.observe(ref.current);
     }
   }, [ref, observer]);
+
+  if (tagName) {
+    return React.createElement(
+      tagName,
+      {
+        className: `${className} t-left-wrapper`,
+        ref: ref,
+        'data-func': 'show',
+        'data-classname': 't-left-transition',
+      },
+      children,
+    );
+  }
 
   return (
     <div

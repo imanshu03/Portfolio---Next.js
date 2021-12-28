@@ -1,0 +1,93 @@
+@import './variables.scss';
+
+.experience {
+  flex-flow: column wrap;
+  align-items: flex-start;
+  justify-content: center;
+
+  &-wrapper {
+    display: flex;
+    flex-flow: row;
+    height: inherit;
+
+    &-content {
+      display: flex;
+      flex-flow: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      @media (hover: hover) {
+        &:hover {
+          .heading,
+          .subtext {
+            letter-spacing: 1px;
+          }
+        }
+      }
+
+      .text-muted {
+        font-size: $font4;
+        font-style: italic;
+        color: $grey;
+        margin: 0;
+        text-transform: capitalize;
+
+        &:first-of-type {
+          margin-top: 0.2rem;
+        }
+
+        &:last-of-type {
+          margin-top: 0.4rem;
+        }
+      }
+
+      .heading {
+        margin: 0;
+        margin-top: 0.4rem;
+        font-size: $font6;
+        font-weight: 500;
+        color: $steelBlue;
+        text-transform: capitalize;
+      }
+
+      .subtext {
+        margin: 0;
+        margin-bottom: 0.4rem;
+        font-size: $font7;
+        color: $steelBlue;
+        text-transform: capitalize;
+        font-weight: 500;
+      }
+
+      .inline-text {
+        margin: 0;
+        margin-left: 0.2rem;
+        font-size: $font7;
+        color: $steelBlue;
+        text-transform: capitalize;
+        font-style: italic;
+        font-weight: 500;
+      }
+
+      .heading,
+      .subtex,
+      .cgpa {
+        transition: 0.2s all ease-in-out;
+      }
+
+      .r-list {
+        li {
+          margin-bottom: 0.6rem;
+          font-size: $font3;
+          text-align: justify;
+          color: $black;
+          line-height: 1.2;
+        }
+      }
+    }
+
+    .edu {
+      margin-bottom: 4rem;
+    }
+  }
+}

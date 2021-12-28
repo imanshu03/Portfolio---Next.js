@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { ObserverContext } from '../ObserverStore';
+import { ObserverContext } from '../../ObserverStore';
 
 const SectionHeader = (props) => {
-  const { heading, text, image, alt } = props;
+  const { heading, text, image, alt, className = '' } = props;
 
   const observer = useContext(ObserverContext);
   const ref = useRef(null);
@@ -16,7 +16,7 @@ const SectionHeader = (props) => {
 
   return (
     <div
-      className="section-header t-top-wrapper"
+      className={`section-header t-top-wrapper ${className}`}
       data-func="show"
       data-classname="t-top-transition"
       ref={ref}
