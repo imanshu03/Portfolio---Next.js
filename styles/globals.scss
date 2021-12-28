@@ -9,7 +9,6 @@ body,
   margin: 0;
   font-family: 'Ubuntu', sans-serif;
   background-color: $lightGrey;
-  scroll-behavior: smooth;
 }
 
 a {
@@ -22,6 +21,7 @@ a {
 }
 
 .section {
+  overflow-x: hidden;
   width: 100%;
   display: flex;
   flex-flow: row wrap;
@@ -85,18 +85,18 @@ a {
   height: 100%;
 }
 
-.back-to-top-cta {
+.footer-cta {
   background-color: $white !important;
   display: block;
-  padding: 2rem 0;
+  padding: 1rem 0;
 
   button {
     margin: 1rem auto;
     padding: 1rem;
     background-color: transparent;
-    border: 1px solid $grey;
+    border: 1px solid $steelBlue;
     outline: none;
-    color: $grey;
+    color: $steelBlue;
     cursor: pointer;
     transition: 0.2s all ease-in-out;
 
@@ -106,15 +106,19 @@ a {
     justify-content: center;
 
     @media (hover: hover) {
-      &:hover {
-        border-color: $steelBlue;
-        background-color: $steelBlue;
-        color: $white;
-      }
-    }
+      & {
+        border-color: $grey;
+        color: $grey;
 
-    &:active {
-      transform: scale(0.9);
+        &:hover {
+          border-color: $steelBlue;
+          background-color: $steelBlue;
+          color: $white;
+        }
+        &:active {
+          transform: scale(0.9);
+        }
+      }
     }
   }
 }
@@ -245,3 +249,4 @@ a {
 @import './skills.scss';
 @import './experience.scss';
 @import './timeline.scss';
+@import './achievements.scss';

@@ -1,4 +1,4 @@
-$lightGrey: #fbfbfb;
+$lightGrey: #f4f4f4;
 $black: #000000;
 $steelBlue: #4682b4;
 $lightBlue: #8ab9e1;
@@ -15,3 +15,17 @@ $font7: 1.2rem;
 $font8: 2rem;
 
 $light: 300;
+
+.gradient {
+  background: #67b26f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #4ca2cd,
+    #67b26f
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #4ca2cd,
+    #67b26f
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

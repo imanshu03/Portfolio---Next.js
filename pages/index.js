@@ -7,6 +7,8 @@ import { useEffect } from 'react';
 import Skills from './Components/Skills';
 import WorkExperience from './Components/WorkExperience';
 import Education from './Components/Education';
+import Achievements from './Components/Achievements';
+import BackToTop from './Components/BackToTop';
 
 export default function Home({ data }) {
   useEffect(() => {
@@ -14,6 +16,7 @@ export default function Home({ data }) {
       top: 0,
       behavior: 'smooth',
     });
+    console.log('running');
   }, []);
 
   return (
@@ -28,6 +31,8 @@ export default function Home({ data }) {
         <Skills data={data.skills} />
         <WorkExperience data={data.workExperience} />
         <Education data={data.education} />
+        <Achievements data={data.achievements} />
+        <BackToTop />
       </ObserverStore>
     </>
   );

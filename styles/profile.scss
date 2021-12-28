@@ -84,6 +84,12 @@
           border-color: $steelBlue;
           color: $white;
           background-color: $steelBlue;
+
+          .loader {
+            svg {
+              fill: $white;
+            }
+          }
         }
         &:active {
           transform: scale(0.9);

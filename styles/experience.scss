@@ -16,15 +16,6 @@
       align-items: flex-start;
       justify-content: flex-start;
 
-      @media (hover: hover) {
-        &:hover {
-          .heading,
-          .subtext {
-            letter-spacing: 1px;
-          }
-        }
-      }
-
       .text-muted {
         font-size: $font4;
         font-style: italic;

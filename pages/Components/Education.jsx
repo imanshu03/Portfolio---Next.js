@@ -11,7 +11,11 @@ const Education = ({ data }) => {
         {data.map((exp, idx) => (
           <div className="experience-wrapper" key={idx}>
             <Timeline isLast={idx === data.length - 1} />
-            <FragmentLeft className="experience-wrapper-content edu">
+            <FragmentLeft
+              className={`experience-wrapper-content ${
+                idx !== data.length - 1 && 'edu'
+              }`}
+            >
               <p className="text-muted">
                 {exp.startDate} - {exp.endDate}
               </p>
