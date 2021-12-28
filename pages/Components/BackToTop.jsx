@@ -3,7 +3,7 @@ import UpIcon from '../Assets/caret-up-fill.svg';
 import FragmentLeft from './FragmentLeft';
 
 const BackToTop = () => {
-  const scollToTop = () => {
+  const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
@@ -11,12 +11,12 @@ const BackToTop = () => {
   };
 
   return (
-    <FragmentLeft className="footer-cta">
-      <button onClick={scollToTop}>
+    <div className="footer-cta">
+      <FragmentLeft props={{ onClick: scrollToTop }} tagName="button">
         Back to top&ensp;
         <UpIcon />
-      </button>
-    </FragmentLeft>
+      </FragmentLeft>
+    </div>
   );
 };
 

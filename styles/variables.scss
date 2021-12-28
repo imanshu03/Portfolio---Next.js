@@ -5,6 +5,12 @@ $lightBlue: #8ab9e1;
 $grey: #6e6e6e;
 $white: #ffffff;
 
+$color1: #3d72b4;
+$color2: #525252;
+
+// $color1: #be93c5;
+// $color2: #7bc6cc;
+
 $font1: 4.6rem;
 $font2: 2.2rem;
 $font3: 1rem;
@@ -13,19 +19,30 @@ $font5: 0.6rem;
 $font6: 1.6rem;
 $font7: 1.2rem;
 $font8: 2rem;
+$font9: 1.4rem;
 
 $light: 300;
 
-.gradient {
-  background: #67b26f; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #4ca2cd,
-    #67b26f
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #4ca2cd,
-    #67b26f
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+@mixin gradient {
+  // background: #be93c5;
+  // background: -webkit-linear-gradient(to left, #7bc6cc, #be93c5);
+  // background: linear-gradient(to left, #7bc6cc, #be93c5);
+  background: #525252;
+  background: -webkit-linear-gradient(to bottom right, #3d72b4, #525252);
+  background: linear-gradient(to bottom right, #3d72b4, #525252);
+}
+
+@mixin gradient-text {
+  // background-color: #be93c5;
+  // background-image: -webkit-linear-gradient(to left, #7bc6cc, #be93c5);
+  // background-image: linear-gradient(to left, #7bc6cc, #be93c5);
+  background-color: #525252;
+  background-image: -webkit-linear-gradient(to bottom right, #3d72b4, #525252);
+  background-image: linear-gradient(to bottom right, #3d72b4, #525252);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }

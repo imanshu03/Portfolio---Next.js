@@ -1,7 +1,12 @@
 import React, { useContext, useEffect, useRef } from 'react';
 import { ObserverContext } from '../ObserverStore';
 
-const FragmentLeft = ({ children, className = '', tagName = '' }) => {
+const FragmentLeft = ({
+  children,
+  className = '',
+  tagName = '',
+  props = {},
+}) => {
   const ref = useRef(null);
   const observer = useContext(ObserverContext);
 
@@ -19,6 +24,7 @@ const FragmentLeft = ({ children, className = '', tagName = '' }) => {
         ref: ref,
         'data-func': 'show',
         'data-classname': 't-left-transition',
+        ...props,
       },
       children,
     );

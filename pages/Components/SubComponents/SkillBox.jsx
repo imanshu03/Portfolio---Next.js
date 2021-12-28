@@ -12,14 +12,14 @@ const SkillBox = ({ text }) => {
   }, [ref, observer]);
 
   return (
-    <span
+    <div
       className="skill-box t-left-wrapper"
       data-func="show"
       data-classname="t-left-transition"
       ref={ref}
     >
-      {text}
-    </span>
+      <span>{text}</span>
+    </div>
   );
 };
 

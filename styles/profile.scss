@@ -20,11 +20,12 @@
     .greeting {
       font-size: $font3;
       font-weight: $light;
-      color: $grey;
+      color: $black;
       margin-bottom: 0.6rem;
     }
 
     .designation {
+      @include gradient-text;
       letter-spacing: 1px;
       color: $black;
       font-weight: $light;
@@ -33,14 +34,14 @@
 
     .first-name,
     .last-name {
-      color: $steelBlue;
       font-size: $font1;
       text-transform: uppercase;
+      @include gradient-text;
     }
 
     .about {
       text-align: justify;
-      color: $grey;
+      color: $black;
       font-size: $font3;
       font-weight: $light;
       line-height: 2;
@@ -52,10 +53,10 @@
     }
 
     .dw-resume {
+      @include gradient;
       outline: none;
-      border: 1px solid $steelBlue;
-      background-color: transparent;
-      color: $steelBlue;
+      border: none;
+      color: $white;
       transition: 0.2s all ease-in-out;
       cursor: pointer;
       text-decoration: none;
@@ -71,28 +72,19 @@
         svg {
           width: 40 !important;
           height: 40 !important;
-          fill: $steelBlue;
+          fill: $white;
         }
       }
 
       @media (hover: hover) {
-        & {
-          color: $grey;
-          border-color: $grey;
-        }
         &:hover {
           border-color: $steelBlue;
           color: $white;
           background-color: $steelBlue;
-
-          .loader {
-            svg {
-              fill: $white;
-            }
-          }
+          transform: scale(1.04);
         }
         &:active {
-          transform: scale(0.9);
+          transform: scale(1);
         }
       }
     }
@@ -111,33 +103,31 @@
       justify-content: flex-start;
       cursor: pointer;
       padding: 1rem 0;
+      font-weight: 300;
 
       svg {
         margin-right: 8px;
-        * {
-          fill: $steelBlue;
-        }
       }
 
       .value {
         text-decoration: none;
-        color: $grey;
+        color: $black;
       }
 
       @media (hover: hover) {
         & {
           svg {
             * {
-              fill: $grey;
+              fill: $black;
             }
           }
         }
         &:hover {
           svg * {
-            fill: $steelBlue;
+            fill: $color1;
           }
           .value {
-            color: $steelBlue;
+            @include gradient-text;
           }
         }
       }

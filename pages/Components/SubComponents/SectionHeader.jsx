@@ -21,9 +21,20 @@ const SectionHeader = (props) => {
       data-classname="t-top-transition"
       ref={ref}
     >
-      {image && <Image src={image} className="picture" alt={alt} />}
+      {image && (
+        <div className="picture">
+          <Image src={image} alt={alt} />
+        </div>
+      )}
       {heading && <h1>{heading}</h1>}
-      {text && <h3>{text}</h3>}
+      {text && (
+        <>
+          <div className="divider">
+            <span />
+          </div>
+          <h3>{text}</h3>
+        </>
+      )}
     </div>
   );
 };

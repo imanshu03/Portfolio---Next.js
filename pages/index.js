@@ -2,13 +2,13 @@ import Head from 'next/head';
 import Profile from './Components/Profile';
 import ObserverStore from './ObserverStore';
 import readJson from '../readJson';
-import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import { useEffect } from 'react';
 import Skills from './Components/Skills';
 import WorkExperience from './Components/WorkExperience';
 import Education from './Components/Education';
 import Achievements from './Components/Achievements';
 import BackToTop from './Components/BackToTop';
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
 export default function Home({ data }) {
   useEffect(() => {
@@ -16,7 +16,6 @@ export default function Home({ data }) {
       top: 0,
       behavior: 'smooth',
     });
-    console.log('running');
   }, []);
 
   return (

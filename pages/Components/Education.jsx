@@ -13,7 +13,7 @@ const Education = ({ data }) => {
             <Timeline isLast={idx === data.length - 1} />
             <FragmentLeft
               className={`experience-wrapper-content ${
-                idx !== data.length - 1 && 'edu'
+                idx !== data.length - 1 ? 'edu' : 'edu-last'
               }`}
             >
               <p className="text-muted">

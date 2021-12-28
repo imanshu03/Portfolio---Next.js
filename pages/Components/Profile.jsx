@@ -59,7 +59,7 @@ const Profile = ({ data }) => {
   const [download, setDownload] = useState(false);
 
   return (
-    <div className="section full-height">
+    <div className="section particles full-height">
       <SectionHeader image={ProfileImg} alt="profile" />
       <div className="section-body profile">
         <FragmentLeft className="profile-section">

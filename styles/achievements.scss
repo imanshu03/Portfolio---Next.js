@@ -12,18 +12,8 @@
     align-items: stretch;
     justify-content: center;
     margin: 1rem;
-
-    @media (hover: hover) {
-      &:hover {
-        .achievements-wrapper-top {
-          .heading {
-            h3 {
-              color: $steelBlue;
-            }
-          }
-        }
-      }
-    }
+    transition: 0.6s opacity ease-in-out, 0.6s left ease-in-out,
+      0.6s top ease-in-out, 0.4s transform ease-in-out !important;
 
     &-top {
       display: flex;
@@ -32,7 +22,7 @@
       justify-content: flex-start;
 
       .wrapper-icon {
-        fill: $steelBlue;
+        fill: $color2;
         width: 3.8rem;
         height: 3.8rem;
 
@@ -49,8 +39,8 @@
           margin: 0;
         }
         h3 {
-          color: $black;
-          font-size: $font6;
+          color: $color2;
+          font-size: $font9;
           transition: 0.2s all ease-in-out;
         }
         span {
@@ -66,6 +56,30 @@
         text-align: justify;
         color: $black;
         font-size: $font3;
+        font-weight: 300;
+      }
+    }
+
+    &:nth-child(odd) {
+      .achievements-wrapper-top {
+        .heading {
+          h3 {
+            color: $color1;
+          }
+        }
+        .wrapper-icon {
+          fill: $color1;
+        }
+      }
+    }
+
+    @media (hover: hover) {
+      & {
+        transform: scale(0.99);
+
+        &:hover {
+          transform: scale(1);
+        }
       }
     }
   }

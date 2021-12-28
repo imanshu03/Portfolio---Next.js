@@ -1,7 +1,12 @@
 import React, { useContext, useEffect, useRef } from 'react';
 import { ObserverContext } from '../ObserverStore';
 
-const FragmentTop = ({ children, className = '', tagName = '' }) => {
+const FragmentTop = ({
+  children,
+  className = '',
+  tagName = '',
+  props = {},
+}) => {
   const ref = useRef(null);
   const observer = useContext(ObserverContext);
 
@@ -19,6 +24,7 @@ const FragmentTop = ({ children, className = '', tagName = '' }) => {
         ref: ref,
         'data-func': 'show',
         'data-classname': 't-top-transition',
+        ...props,
       },
       children,
     );

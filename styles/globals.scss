@@ -1,4 +1,9 @@
 @import './variables.scss';
+@import './profile.scss';
+@import './skills.scss';
+@import './experience.scss';
+@import './timeline.scss';
+@import './achievements.scss';
 
 html,
 body,
@@ -8,7 +13,7 @@ body,
   height: 100%;
   margin: 0;
   font-family: 'Ubuntu', sans-serif;
-  background-color: $lightGrey;
+  background-color: $white;
 }
 
 a {
@@ -30,12 +35,8 @@ a {
   background-color: $white;
   padding: 1rem 0;
 
-  &:nth-child(odd) {
-    background-color: $white;
-  }
-
-  &:nth-child(even) {
-    background-color: $lightGrey;
+  .particle-bg {
+    position: absolute;
   }
 
   &-header {
@@ -56,17 +57,39 @@ a {
     }
     h3 {
       font-size: $font3;
-      color: $grey;
+      color: $black;
       margin: 0;
       font-weight: $light;
     }
 
     .picture {
-      object-fit: cover;
-      max-width: 70%;
+      max-width: 80%;
       border-radius: 50%;
-      overflow: hidden;
-      box-shadow: 0 0 5px rgba($black, 0.1);
+      box-shadow: 0 0 5px rgba($black, 0.2);
+      cursor: pointer;
+      transition: 0.4s all ease-in-out;
+
+      @include gradient;
+
+      & > span {
+        transform: scale(0.98);
+        height: 100% !important;
+        transition: 0.4s all ease-in-out;
+      }
+
+      img {
+        border-radius: 50%;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          transform: scale(1.05);
+
+          & > span {
+            transform: scale(0.96);
+          }
+        }
+      }
     }
   }
 
@@ -78,6 +101,69 @@ a {
     height: inherit;
     box-sizing: border-box;
     transition: 0.6s all ease-out;
+  }
+
+  &:nth-child(odd) {
+    background-color: transparent;
+
+    & {
+      .section-header {
+        h1,
+        h3 {
+          @include gradient-text;
+        }
+      }
+    }
+
+    .timeline {
+      .dot {
+        border-color: $color1;
+      }
+
+      .line {
+        background-color: $color2;
+      }
+    }
+
+    .experience {
+      &-wrapper {
+        &-content {
+          .heading,
+          .subtext {
+            @include gradient-text;
+          }
+        }
+      }
+    }
+  }
+
+  &:nth-child(even) {
+    @include gradient;
+
+    & {
+      .section-header {
+        h1,
+        h3 {
+          color: $white;
+        }
+      }
+    }
+
+    .timeline {
+      .dot {
+        border-color: white;
+      }
+
+      .line {
+        background-color: white;
+      }
+    }
+
+    .experience {
+      * {
+        color: $white;
+      }
+    }
   }
 }
 
@@ -93,30 +179,27 @@ a {
   button {
     margin: 1rem auto;
     padding: 1rem;
-    background-color: transparent;
-    border: 1px solid $steelBlue;
+    @include gradient;
+    border: none;
     outline: none;
-    color: $steelBlue;
+    color: $white;
     cursor: pointer;
-    transition: 0.2s all ease-in-out;
 
     display: flex;
     flex-flow: row;
     align-items: center;
     justify-content: center;
 
+    transition: 0.6s opacity ease-in-out, 0.6s left ease-in-out,
+      0.6s top ease-in-out, 0.2s transform ease-in-out !important;
+
     @media (hover: hover) {
       & {
-        border-color: $grey;
-        color: $grey;
-
         &:hover {
-          border-color: $steelBlue;
-          background-color: $steelBlue;
-          color: $white;
+          transform: scale(1.04);
         }
         &:active {
-          transform: scale(0.9);
+          transform: scale(1);
         }
       }
     }
@@ -174,7 +257,6 @@ a {
   }
 
   .section {
-    padding: 0;
     &-header {
       flex: 1;
       margin: 1rem 0;
@@ -191,16 +273,26 @@ a {
 
   .profile,
   .skills,
-  .experience {
+  .experience,
+  .achievements {
     padding: 0 1rem;
     width: 100%;
     flex: unset;
   }
+
   .profile {
     &-bottom {
       margin-top: 1rem;
 
       .details-item {
+        .value {
+          @include gradient-text;
+        }
+        svg {
+          * {
+            fill: $color1;
+          }
+        }
         width: 40%;
       }
     }
@@ -222,10 +314,14 @@ a {
     &-wrapper {
       &-content {
         .r-list {
-          padding-left: 1rem;
+          padding-left: 1.4rem;
         }
       }
     }
+  }
+
+  .achievements {
+    flex-flow: column wrap;
   }
 }
 
@@ -244,9 +340,3 @@ a {
     }
   }
 }
-
-@import './profile.scss';
-@import './skills.scss';
-@import './experience.scss';
-@import './timeline.scss';
-@import './achievements.scss';
