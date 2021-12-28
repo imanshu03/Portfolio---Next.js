@@ -1,13 +1,13 @@
 import Head from 'next/head';
-import Profile from './Components/Profile';
-import ObserverStore from './ObserverStore';
+import Profile from '../Components/Profile';
+import ObserverStore from '../ObserverStore';
 import readJson from '../readJson';
 import { useEffect } from 'react';
-import Skills from './Components/Skills';
-import WorkExperience from './Components/WorkExperience';
-import Education from './Components/Education';
-import Achievements from './Components/Achievements';
-import BackToTop from './Components/BackToTop';
+import Skills from '../Components/Skills';
+import WorkExperience from '../Components/WorkExperience';
+import Education from '../Components/Education';
+import Achievements from '../Components/Achievements';
+import BackToTop from '../Components/BackToTop';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
 export default function Home({ data }) {
@@ -24,15 +24,19 @@ export default function Home({ data }) {
         <title>{data.pageTitle}</title>
         <meta name="description" content="Imanshu Rathore's Portfolio" />
         <link rel="icon" href="/coding.ico" />
+        <link rel="apple-touch-icon" href="/logo192.png" />
+        <link rel="manifest" href="/manifest.json" />
       </Head>
-      <ObserverStore>
-        <Profile data={data.profile} />
-        <Skills data={data.skills} />
-        <WorkExperience data={data.workExperience} />
-        <Education data={data.education} />
-        <Achievements data={data.achievements} />
-        <BackToTop />
-      </ObserverStore>
+      {data && (
+        <ObserverStore>
+          <Profile data={data.profile} />
+          <Skills data={data.skills} />
+          <WorkExperience data={data.workExperience} />
+          <Education data={data.education} />
+          <Achievements data={data.achievements} />
+          <BackToTop />
+        </ObserverStore>
+      )}
     </>
   );
 }
