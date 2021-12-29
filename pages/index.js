@@ -9,10 +9,11 @@ import Education from '../Components/Education';
 import Achievements from '../Components/Achievements';
 import BackToTop from '../Components/BackToTop';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
+import ScrollProgress from '../Components/ScrollProgress';
 
 export default function Home({ data }) {
   useEffect(() => {
-    window.scrollTo({
+    document.documentElement.scrollTo({
       top: 0,
       behavior: 'smooth',
     });
@@ -28,14 +29,17 @@ export default function Home({ data }) {
         <link rel="manifest" href="/manifest.json" />
       </Head>
       {data && (
-        <ObserverStore>
-          <Profile data={data.profile} />
-          <Skills data={data.skills} />
-          <WorkExperience data={data.workExperience} />
-          <Education data={data.education} />
-          <Achievements data={data.achievements} />
-          <BackToTop />
-        </ObserverStore>
+        <div id="app">
+          <ScrollProgress />
+          <ObserverStore>
+            <Profile data={data.profile} />
+            <Skills data={data.skills} />
+            <WorkExperience data={data.workExperience} />
+            <Education data={data.education} />
+            <Achievements data={data.achievements} />
+            <BackToTop />
+          </ObserverStore>
+        </div>
       )}
     </>
   );
