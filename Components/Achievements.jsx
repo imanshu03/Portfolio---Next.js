@@ -21,7 +21,7 @@ const Achievements = ({ data }) => {
             <div className="achievements-wrapper-top">
               {icons[item.type]}
               <div className="heading-wrapper">
-                <h3 className="heading">{item.heading}</h3>
+                <h2 className="heading">{item.heading}</h2>
                 <span className="subtext-italic">
                   {item.date} - {item.issuer}
                 </span>

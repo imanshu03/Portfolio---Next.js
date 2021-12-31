@@ -21,13 +21,13 @@ const Education = ({ data }) => {
               <p className="text-muted-italic">
                 {exp.startDate} - {exp.endDate}
               </p>
-              <h3 className="heading">
+              <h2 className="heading">
                 {exp.degree}
                 {exp.stream && (
                   <span className="subtext-inline">({exp.stream})</span>
                 )}
-              </h3>
-              <h4 className="subtext">{exp.school}</h4>
+              </h2>
+              <h3 className="subtext">{exp.school}</h3>
               <p className="text-muted-italic-mb">{exp.location}</p>
               <p className="text-muted-italic">{exp.score}</p>
             </FragmentLeft>

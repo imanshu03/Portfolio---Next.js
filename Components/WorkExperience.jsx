@@ -17,8 +17,8 @@ const WorkExperience = ({ data }) => {
               <p className="text-muted-italic">
                 {exp.startDate} - {exp.endDate || 'Present'}
               </p>
-              <h3 className="heading">{exp.designation}</h3>
-              <h4 className="subtext">{exp.company}</h4>
+              <h2 className="heading">{exp.designation}</h2>
+              <h3 className="subtext">{exp.company}</h3>
               <p className="text-muted-italic-mb">{exp.location}</p>
               {exp.responsibilities && (
                 <>

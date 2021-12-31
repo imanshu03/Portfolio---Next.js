@@ -7,6 +7,7 @@ import BackToTop from '../Components/BackToTop';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import ScrollProgress from '../Components/ScrollProgress';
 import ConnectBox from '../Components/ConnectBox';
+import smoothscroll from 'smoothscroll-polyfill';
 
 const Profile = dynamic(() => import('../Components/Profile'));
 const Skills = dynamic(() => import('../Components/Skills'));
@@ -16,6 +17,7 @@ const Achievements = dynamic(() => import('../Components/Achievements'));
 
 export default function Home({ data }) {
   useEffect(() => {
+    smoothscroll.polyfill();
     document.documentElement.scrollTo({
       top: 0,
       behavior: 'smooth',

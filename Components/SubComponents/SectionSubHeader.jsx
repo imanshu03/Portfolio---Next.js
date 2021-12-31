@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useRef } from 'react';
-import Image from 'next/image';
 import { ObserverContext } from '../../ObserverStore';
 
 const SectionSubHeader = (props) => {
@@ -21,7 +20,7 @@ const SectionSubHeader = (props) => {
       data-classname="t-left-transition"
       ref={ref}
     >
-      <h3>{text}</h3>
+      <h1>{text}</h1>
     </div>
   );
 };

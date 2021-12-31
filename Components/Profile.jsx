@@ -52,13 +52,13 @@ const Profile = ({ data }) => {
       <SectionHeader image={ProfileImg} alt="profile" />
       <div className="section-body profile-wrapper">
         <FragmentLeft className="profile-wrapper-section">
-          <h3 className="text-muted">Hi, I am</h3>
+          <p className="text-muted-lg">Hi, I am</p>
           <h1 className="main-heading">{firstName}</h1>
           <h1 className="main-heading">{lastName}</h1>
-          <h3 className="typewriter-text">
+          <p className="typewriter-text">
             {text}
             <Cursor />
-          </h3>
+          </p>
         </FragmentLeft>
         <FragmentLeft className="profile-wrapper-section">
           <p className="para-text">

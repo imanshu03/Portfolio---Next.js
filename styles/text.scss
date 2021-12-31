@@ -8,6 +8,11 @@
   font-size: $font9;
 }
 
+.text-muted-lg {
+  @extend .text-muted;
+  font-size: $font8;
+}
+
 .text-muted-italic {
   @extend .text-muted;
   font-style: italic;
@@ -57,6 +62,7 @@
 }
 
 .typewriter-text {
+  margin: 0;
   color: $color1;
   letter-spacing: 0.2rem;
   font-weight: $light;

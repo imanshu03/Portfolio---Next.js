@@ -5,7 +5,7 @@
   padding: 1rem;
   margin: 1rem 0 2rem 0;
 
-  h3 {
+  h1 {
     font-size: calc(1.2rem + 0.4vw);
     letter-spacing: calc(0.2rem + 0.05vw);
     word-spacing: calc(0.2rem + 0.1vw);
@@ -43,7 +43,7 @@
       color: transparent;
       margin: 0;
     }
-    h3 {
+    h2 {
       font-size: $font8;
       color: $black;
       margin: 0;
@@ -98,12 +98,12 @@
 
     & {
       .section-subheader {
-        h3 {
+        h1 {
           color: $color1;
         }
       }
       .section-header {
-        h3 {
+        h2 {
           color: $color1;
         }
       }
@@ -133,14 +133,14 @@
     @include gradient;
 
     .section-subheader {
-      h3 {
+      h1 {
         color: $white;
       }
     }
 
     & {
       .section-header {
-        h3 {
+        h2 {
           color: white;
         }
       }
