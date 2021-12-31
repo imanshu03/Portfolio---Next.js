@@ -10,6 +10,7 @@ import Achievements from '../Components/Achievements';
 import BackToTop from '../Components/BackToTop';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import ScrollProgress from '../Components/ScrollProgress';
+import ConnectBox from '../Components/ConnectBox';
 
 export default function Home({ data }) {
   useEffect(() => {
@@ -31,6 +32,7 @@ export default function Home({ data }) {
       {data && (
         <div id="app">
           <ScrollProgress />
+          <ConnectBox data={data.socialLinks} />
           <ObserverStore>
             <Profile data={data.profile} />
             <Skills data={data.skills} />

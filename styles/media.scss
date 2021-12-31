@@ -1,0 +1,180 @@
+@import './variables.scss';
+
+@media (max-width: 1000px) {
+  .section {
+    padding: 1rem;
+  }
+  .full-height {
+    height: unset;
+  }
+}
+
+@media (max-width: 810px) {
+  .t-left-wrapper {
+    left: 0rem;
+    top: -2rem;
+  }
+
+  .t-top-wrapper {
+    top: 0rem;
+    left: 2rem;
+  }
+
+  .t-left-transition {
+    opacity: 1;
+    top: 0;
+    left: 0;
+  }
+
+  .t-top-transition {
+    opacity: 1;
+    top: 0;
+    left: 0;
+  }
+
+  .section-subheader {
+    display: none;
+  }
+
+  .section {
+    padding: 1rem;
+
+    &:nth-child(odd) {
+      & {
+        .section-header {
+          h1 {
+            color: $color1;
+          }
+          h3 {
+            color: $color1;
+          }
+        }
+      }
+    }
+
+    &:nth-child(even) {
+      & {
+        .section-header {
+          h1 {
+            color: white;
+          }
+          h3 {
+            color: white;
+          }
+        }
+      }
+    }
+
+    &-header {
+      flex: 1;
+      margin: 1rem 0;
+
+      h3 {
+        display: block;
+      }
+
+      .picture {
+        width: 10rem;
+      }
+    }
+  }
+
+  .full-height {
+    height: fit-content;
+  }
+
+  .profile-wrapper,
+  .skills,
+  .experience,
+  .achievements {
+    padding: 0 1rem;
+    width: 100%;
+    flex: unset;
+  }
+
+  .profile-wrapper {
+    &-section {
+      align-items: center !important;
+
+      .dw-resume {
+        align-self: center;
+      }
+    }
+  }
+
+  .experience {
+    &-wrapper {
+      &-content {
+        .list {
+          padding-left: 1.4rem;
+        }
+      }
+    }
+  }
+
+  .achievements {
+    flex-flow: column wrap;
+  }
+}
+
+@media (max-width: 500px) {
+  .section-body {
+    padding: 0 0.5rem;
+  }
+  .section {
+    padding: 1rem 0;
+  }
+  .profile-wrapper {
+    &-bottom {
+      .details-item {
+        .value {
+          svg {
+            width: 1.4rem;
+            height: 1.4rem;
+          }
+          .value-text {
+            display: none;
+          }
+        }
+        width: fit-content;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 811px) {
+  .section {
+    &:nth-child(even) {
+      .section-header {
+        h1 {
+          @include text-stroke;
+          @include vertical-text;
+          transform: rotate(180deg);
+          -webkit-text-stroke-color: $white;
+        }
+
+        h3 {
+          display: none;
+        }
+      }
+    }
+    &:nth-child(odd) {
+      .section-header {
+        h1 {
+          @include text-stroke;
+          @include vertical-text;
+          transform: rotate(180deg);
+          -webkit-text-stroke-color: $color1;
+        }
+
+        h3 {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .section-subheader {
+    display: block;
+  }
+}

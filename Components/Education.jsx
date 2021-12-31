@@ -1,6 +1,7 @@
 import React from 'react';
 import FragmentLeft from './FragmentLeft';
 import SectionHeader from './SubComponents/SectionHeader';
+import SectionSubHeader from './SubComponents/SectionSubHeader';
 import Timeline from './SubComponents/Timeline';
 
 const Education = ({ data }) => {
@@ -8,6 +9,7 @@ const Education = ({ data }) => {
     <div className="section">
       <SectionHeader heading="Education" text="I have a decent knowledge" />
       <div className="section-body experience">
+        <SectionSubHeader text="I have a decent knowledge" />
         {data.map((exp, idx) => (
           <div className="experience-wrapper" key={idx}>
             <Timeline isLast={idx === data.length - 1} />
@@ -16,19 +18,18 @@ const Education = ({ data }) => {
                 idx !== data.length - 1 ? 'edu' : 'edu-last'
               }`}
             >
-              <p className="text-muted">
+              <p className="text-muted-italic">
                 {exp.startDate} - {exp.endDate}
               </p>
-              <br />
               <h3 className="heading">
                 {exp.degree}
                 {exp.stream && (
-                  <span className="inline-text">({exp.stream})</span>
+                  <span className="subtext-inline">({exp.stream})</span>
                 )}
               </h3>
               <h4 className="subtext">{exp.school}</h4>
-              <p className="text-muted">{exp.location}</p>
-              <p className="text-muted">{exp.score}</p>
+              <p className="text-muted-italic-mb">{exp.location}</p>
+              <p className="text-muted-italic">{exp.score}</p>
             </FragmentLeft>
           </div>
         ))}

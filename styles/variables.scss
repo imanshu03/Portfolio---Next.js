@@ -5,23 +5,23 @@ $lightBlue: #8ab9e1;
 $grey: #6e6e6e;
 $white: #ffffff;
 
-$color1: #3d72b4;
+$color1: #275186;
 $color2: #525252;
 
-// $color1: #be93c5;
-// $color2: #7bc6cc;
-
 $font1: 4.6rem;
-$font2: 2.2rem;
-$font3: 1rem;
-$font4: 0.8rem;
-$font5: 0.6rem;
-$font6: 1.6rem;
+$font2: 3rem;
+$font3: 2.2rem;
+$font4: 2rem;
+$font5: 1.6rem;
+$font6: 1.4rem;
 $font7: 1.2rem;
-$font8: 2rem;
-$font9: 1.4rem;
+$font8: 1rem;
+$font9: 0.8rem;
+$font10: 0.6rem;
 
 $light: 300;
+$regular: 500;
+$bold: 700;
 
 @mixin gradient {
   // background: #be93c5;
@@ -45,4 +45,20 @@ $light: 300;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+}
+
+@mixin text-stroke {
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke-color: $color1;
+  -webkit-text-stroke-width: 1px;
+}
+
+@mixin vertical-text {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+}
+
+@mixin font-r-3 {
+  font-size: calc(3rem + 4vw);
 }

@@ -1,9 +1,9 @@
 @import './variables.scss';
 
-.profile {
+.profile-wrapper {
   flex-flow: column wrap;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
 
   &-section {
     width: 100%;
@@ -20,28 +20,29 @@
     .greeting {
       font-size: $font3;
       font-weight: $light;
-      color: $black;
+      color: $grey;
       margin-bottom: 0.6rem;
     }
 
     .designation {
-      @include gradient-text;
+      color: $color1;
       letter-spacing: 1px;
-      color: $black;
       font-weight: $light;
       font-size: $font8;
     }
 
     .first-name,
     .last-name {
-      font-size: $font1;
+      font-size: calc(3rem + 4vw);
       text-transform: uppercase;
-      @include gradient-text;
+      color: transparent;
+      -webkit-text-stroke-color: $color1;
+      -webkit-text-stroke-width: 1px;
     }
 
     .about {
       text-align: justify;
-      color: $black;
+      color: $grey;
       font-size: $font3;
       font-weight: $light;
       line-height: 2;
@@ -87,58 +88,6 @@
           transform: scale(1);
         }
       }
-    }
-  }
-
-  &-bottom {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-
-    .details-item {
-      cursor: pointer;
-      padding: 1rem 0;
-      font-weight: 300;
-
-      .value {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        text-decoration: none;
-        color: $black;
-
-        svg {
-          margin-right: 8px;
-        }
-      }
-
-      @media (hover: hover) {
-        & {
-          svg {
-            * {
-              fill: $black;
-            }
-          }
-        }
-        &:hover {
-          svg * {
-            fill: $color1;
-          }
-          .value {
-            @include gradient-text;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 848px) {
-  .about {
-    span {
-      margin-bottom: 0 !important;
     }
   }
 }

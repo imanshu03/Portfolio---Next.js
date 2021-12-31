@@ -4,10 +4,10 @@ const ScrollProgress = () => {
   const [width, setWidth] = useState(0);
 
   useEffect(() => {
-    const app = window;
+    const app = document;
     function handleScroll() {
-      let y = Math.ceil(window.scrollY);
-      let maxY = Math.ceil(window.scrollMaxY);
+      let y = Math.ceil(app.scrollY);
+      let maxY = Math.ceil(app.scrollMaxY);
       const per = 100 - ((maxY - y) / maxY) * 100;
       setWidth(per);
     }
@@ -19,6 +19,7 @@ const ScrollProgress = () => {
     };
   }, []);
 
+  console.log(width);
   return <div id="scroll-progress" style={{ width: `${width}%` }} />;
 };
 

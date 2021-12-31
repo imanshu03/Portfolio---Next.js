@@ -32,22 +32,9 @@
         }
       }
 
-      .heading {
+      .heading-wrapper {
         margin-left: 1rem;
-        h3,
-        span {
-          margin: 0;
-        }
-        h3 {
-          color: $color1;
-          font-size: $font9;
-          transition: 0.2s all ease-in-out;
-        }
-        span {
-          font-size: $font4;
-          color: $grey;
-          font-style: italic;
-        }
+        width: 100%;
       }
     }
 
@@ -55,18 +42,8 @@
       .description {
         text-align: justify;
         color: $black;
-        font-size: $font3;
-        font-weight: 300;
-      }
-    }
-
-    @media (hover: hover) {
-      & {
-        transform: scale(0.99);
-
-        &:hover {
-          transform: scale(1);
-        }
+        font-size: $font8;
+        font-weight: $light;
       }
     }
   }

@@ -1,6 +1,7 @@
 import React from 'react';
 import FragmentLeft from './FragmentLeft';
 import SectionHeader from './SubComponents/SectionHeader';
+import SectionSubHeader from './SubComponents/SectionSubHeader';
 import SkillBox from './SubComponents/SkillBox';
 
 const Skills = ({ data }) => {
@@ -11,16 +12,12 @@ const Skills = ({ data }) => {
         text="Values I can add to the organization"
       />
       <div className="section-body skills">
-        {Object.keys(data).map((category, idx) => (
-          <div className="skills-section" key={idx}>
-            <FragmentLeft tagName="h1">{category}</FragmentLeft>
-            <div className="skills-section-wrapper">
-              {data[category].map((text, idx) => (
-                <SkillBox text={text} key={idx} />
-              ))}
-            </div>
-          </div>
-        ))}
+        <SectionSubHeader text="Values I can add to the organization" />
+        <div className="skills-section-wrapper">
+          {data.map((item, idx) => (
+            <SkillBox {...item} key={idx} />
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import SectionHeader from './SubComponents/SectionHeader';
 import AwardIcon from '../Assets/AwardFill';
 import StarIcon from '../Assets/StarIcon';
 import FragmentLeft from './FragmentLeft';
+import SectionSubHeader from './SubComponents/SectionSubHeader';
 
 const icons = {
   award: <AwardIcon className="wrapper-icon" />,
@@ -12,21 +13,22 @@ const icons = {
 const Achievements = ({ data }) => {
   return (
     <div className="section">
-      <SectionHeader heading="Achievements" text="Awards I have achieved" />
+      <SectionHeader heading="Awards" text="Awards I have achieved" />
       <div className="section-body achievements">
+        <SectionSubHeader text="Awards I have achieved" />
         {data.map((item, idx) => (
           <FragmentLeft className="achievements-wrapper" key={idx}>
             <div className="achievements-wrapper-top">
               {icons[item.type]}
-              <div className="heading">
-                <h3>{item.heading}</h3>
-                <span className="date">
+              <div className="heading-wrapper">
+                <h3 className="heading">{item.heading}</h3>
+                <span className="subtext-italic">
                   {item.date} - {item.issuer}
                 </span>
               </div>
             </div>
             <div className="achievements-wrapper-bottom">
-              <p className="description">{item.description}</p>
+              <p className="para-text-0m">{item.description}</p>
             </div>
           </FragmentLeft>
         ))}
