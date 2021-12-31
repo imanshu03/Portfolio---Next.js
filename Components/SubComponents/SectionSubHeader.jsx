@@ -9,16 +9,16 @@ const SectionSubHeader = (props) => {
   const ref = useRef(null);
 
   useEffect(() => {
-    if (false && ref.current && observer) {
+    if (ref.current && observer) {
       observer.observe(ref.current);
     }
   }, [ref, observer]);
 
   return (
     <div
-      className={`section-subheader ${className}`}
+      className={`section-subheader ${className} t-left-wrapper`}
       data-func="show"
-      data-classname="t-top-transition"
+      data-classname="t-left-transition"
       ref={ref}
     >
       <h3>{text}</h3>

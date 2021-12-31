@@ -1,6 +1,6 @@
 @import './variables.scss';
 
-@media (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
   .section {
     padding: 1rem;
   }
@@ -9,7 +9,7 @@
   }
 }
 
-@media (max-width: 810px) {
+@media screen and (max-width: 810px) {
   .t-left-wrapper {
     left: 0rem;
     top: -2rem;
@@ -38,6 +38,14 @@
 
   .section {
     padding: 1rem;
+
+    &-header {
+      .picture {
+        & > span {
+          transform: scale(0.98);
+        }
+      }
+    }
 
     &:nth-child(odd) {
       & {
@@ -117,27 +125,17 @@
   }
 }
 
-@media (max-width: 500px) {
-  .section-body {
-    padding: 0 0.5rem;
-  }
+@media screen and (max-width: 500px) {
   .section {
     padding: 1rem 0;
-  }
-  .profile-wrapper {
-    &-bottom {
-      .details-item {
-        .value {
-          svg {
-            width: 1.4rem;
-            height: 1.4rem;
-          }
-          .value-text {
-            display: none;
-          }
-        }
-        width: fit-content;
+    &-header {
+      h1 {
+        font-size: $font3;
       }
+    }
+
+    &-body {
+      padding: 0 0.5rem;
     }
   }
 }

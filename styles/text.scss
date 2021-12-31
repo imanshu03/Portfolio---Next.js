@@ -98,6 +98,10 @@
   .subtext {
     font-size: $font8;
   }
+  .subtext-inline {
+    display: block;
+    margin: 0 0 0.4rem 0;
+  }
 }
 
 @media screen and (max-width: 500px) {

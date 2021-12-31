@@ -7,14 +7,14 @@ const SkillBox = ({ text, icon }) => {
   const observer = useContext(ObserverContext);
 
   useEffect(() => {
-    if (false && ref.current && observer) {
+    if (ref.current && observer) {
       observer.observe(ref.current);
     }
   }, [ref, observer]);
 
   return (
     <div
-      className="skill-box"
+      className="skill-box t-left-wrapper"
       data-func="show"
       data-classname="t-left-transition"
       ref={ref}

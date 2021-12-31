@@ -1,16 +1,18 @@
 import Head from 'next/head';
-import Profile from '../Components/Profile';
+import dynamic from 'next/dynamic';
 import ObserverStore from '../ObserverStore';
 import readJson from '../readJson';
 import { useEffect } from 'react';
-import Skills from '../Components/Skills';
-import WorkExperience from '../Components/WorkExperience';
-import Education from '../Components/Education';
-import Achievements from '../Components/Achievements';
 import BackToTop from '../Components/BackToTop';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import ScrollProgress from '../Components/ScrollProgress';
 import ConnectBox from '../Components/ConnectBox';
+
+const Profile = dynamic(() => import('../Components/Profile'));
+const Skills = dynamic(() => import('../Components/Skills'));
+const WorkExperience = dynamic(() => import('../Components/WorkExperience'));
+const Education = dynamic(() => import('../Components/Education'));
+const Achievements = dynamic(() => import('../Components/Achievements'));
 
 export default function Home({ data }) {
   useEffect(() => {
@@ -32,7 +34,8 @@ export default function Home({ data }) {
       {data && (
         <div id="app">
           <ScrollProgress />
-          <ConnectBox data={data.socialLinks} />
+          <div />
+          {/* <ConnectBox data={data.socialLinks} /> */}
           <ObserverStore>
             <Profile data={data.profile} />
             <Skills data={data.skills} />

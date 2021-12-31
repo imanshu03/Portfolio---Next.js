@@ -11,7 +11,7 @@ const FragmentLeft = ({
   const observer = useContext(ObserverContext);
 
   useEffect(() => {
-    if (false && ref.current && observer) {
+    if (ref.current && observer) {
       observer.observe(ref.current);
     }
   }, [ref, observer]);
@@ -20,7 +20,7 @@ const FragmentLeft = ({
     return React.createElement(
       tagName,
       {
-        className: `${className}`,
+        className: `${className} t-left-wrapper`,
         ref: ref,
         'data-func': 'show',
         'data-classname': 't-left-transition',
@@ -32,7 +32,7 @@ const FragmentLeft = ({
 
   return (
     <div
-      className={`${className}`}
+      className={`${className} t-left-wrapper`}
       data-func="show"
       data-classname="t-left-transition"
       ref={ref}

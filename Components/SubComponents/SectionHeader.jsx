@@ -9,21 +9,21 @@ const SectionHeader = (props) => {
   const ref = useRef(null);
 
   useEffect(() => {
-    if (false && ref.current && observer) {
+    if (ref.current && observer) {
       observer.observe(ref.current);
     }
   }, [ref, observer]);
 
   return (
     <div
-      className={`section-header ${className}`}
+      className={`section-header ${className} t-top-wrapper`}
       data-func="show"
       data-classname="t-top-transition"
       ref={ref}
     >
       {image && (
         <div className="picture">
-          <Image src={image} alt={alt} />
+          <Image src={image} alt={alt} priority />
         </div>
       )}
       {heading && <h1>{heading}</h1>}
