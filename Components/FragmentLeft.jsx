@@ -32,7 +32,7 @@ const FragmentLeft = ({
 
   return (
     <div
-      className={`${className} t-left-wrapper `}
+      className={`${className} t-left-wrapper`}
       data-func="show"
       data-classname="t-left-transition"
       ref={ref}

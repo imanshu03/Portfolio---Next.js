@@ -1,5 +1,33 @@
 {
   "pageTitle": "Imanshu Rathore's - Resume",
+  "socialLinks": [
+    {
+      "icon": "MailIcon",
+      "value": "imanshurathore@gmail.com",
+      "link": true,
+      "href": "mailto:imanshurathore@gmail.com"
+    },
+    {
+      "icon": "MobileIcon",
+      "value": "7837770661",
+      "link": true,
+      "href": "tel:+91-7837770661"
+    },
+    {
+      "icon": "LinkedinIcon",
+      "value": "linkedin.com/in/imanshurathore/",
+      "link": true,
+      "href": "https://www.linkedin.com/in/imanshurathore/",
+      "target": "_blank"
+    },
+    {
+      "icon": "GithubIcon",
+      "value": "github.com/imanshu03",
+      "link": true,
+      "href": "https://github.com/imanshu03",
+      "target": "_blank"
+    }
+  ],
   "profile": {
     "firstName": "imanshu",
     "lastName": "rathore",
@@ -14,73 +42,25 @@
       "If I am not working then there is a high chance that I am busy potting pool balls with my cue or leading my player for a Winner Winner Chicken Dinner!",
       "Scroll down to know more about me!"
     ],
-    "resume": "https://drive.google.com/uc?id=11rcKwVOYSRMLk8Hz1wmp2TVn3OfGOOqg&export=download",
-    "socialLinks": [
-      {
-        "icon": "mail",
-        "value": "imanshurathore@gmail.com",
-        "link": true,
-        "href": "mailto:imanshurathore@gmail.com"
-      },
-      {
-        "icon": "mobile",
-        "value": "7837770661",
-        "link": true,
-        "href": "tel:+91-7837770661"
-      },
-      {
-        "icon": "location",
-        "value": "Chandigarh, India",
-        "link": false
-      },
-      {
-        "icon": "linkedin",
-        "value": "linkedin.com/in/imanshurathore/",
-        "link": true,
-        "href": "https://www.linkedin.com/in/imanshurathore/",
-        "target": "_blank"
-      },
-      {
-        "icon": "github",
-        "value": "github.com/imanshu03",
-        "link": true,
-        "href": "https://github.com/imanshu03",
-        "target": "_blank"
-      }
-    ]
+    "resume": "https://drive.google.com/uc?id=11rcKwVOYSRMLk8Hz1wmp2TVn3OfGOOqg&export=download"
   },
-  "skills": {
-    "technical": [
-      "React.js",
-      "JavaScript ES6+",
-      "TypeScript",
-      "HTML5",
-      "CSS3",
-      "SCSS",
-      "Redux.js",
-      "Redux Saga",
-      "Express.js",
-      "Node.js",
-      "Git",
-      "Adobe Photoshop",
-      "WebPack",
-      "Jest/Enzyme",
-      "System Design",
-      "Data Structures & Algorithms"
-    ],
-    "soft": [
-      "Fluent Communicator",
-      "Active Listening",
-      "Collaborative",
-      "Multitasking",
-      "Time Management",
-      "Persuasive",
-      "Rapport Building",
-      "Ability to Work Under Pressure",
-      "Problem Solving",
-      "Brainstorming"
-    ]
-  },
+  "skills": [
+    { "text": "React.js", "icon": "ReactIcon" },
+    { "text": "JavaScript ES6+", "icon": "JsIcon" },
+    { "text": "TypeScript", "icon": "TsIcon" },
+    { "text": "HTML5", "icon": "HtmlIcon" },
+    { "text": "CSS3", "icon": "CssIcon" },
+    { "text": "SCSS", "icon": "SassIcon" },
+    { "text": "Redux.js", "icon": "ReduxIcon" },
+    { "text": "Redux Saga", "icon": "SagaIcon" },
+    { "text": "Express.js", "icon": "ExpressIcon" },
+    { "text": "Node.js", "icon": "NodeIcon" },
+    { "text": "Git", "icon": "GitIcon" },
+    { "text": "Adobe Photoshop", "icon": "PsIcon" },
+    { "text": "WebPack", "icon": "WebPackIcon" },
+    { "text": "System Design", "icon": null },
+    { "text": "Data Structures & Algorithms", "icon": null }
+  ],
   "workExperience": [
     {
       "company": "paytm payments bank",
@@ -142,7 +122,7 @@
   "achievements": [
     {
       "type": "award",
-      "heading": "30Hacks Hackathon Runner Up",
+      "heading": "30Hacks Hackathon",
       "date": "December, 2019",
       "issuer": "GlobalLogic",
       "description": "Achieved second prize at company wide Hackathon.  Built a Web-Application that predicts the best suitable institute for the students based upon his/her inputs using Machine Learning Model."

@@ -1,0 +1,178 @@
+@import './variables.scss';
+
+@media screen and (max-width: 1000px) {
+  .section {
+    padding: 1rem;
+  }
+  .full-height {
+    height: unset;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .t-left-wrapper {
+    left: 0rem;
+    top: -2rem;
+  }
+
+  .t-top-wrapper {
+    top: 0rem;
+    left: 2rem;
+  }
+
+  .t-left-transition {
+    opacity: 1;
+    top: 0;
+    left: 0;
+  }
+
+  .t-top-transition {
+    opacity: 1;
+    top: 0;
+    left: 0;
+  }
+
+  .section-subheader {
+    display: none;
+  }
+
+  .section {
+    padding: 1rem;
+
+    &-header {
+      .picture {
+        & > span {
+          transform: scale(0.98);
+        }
+      }
+    }
+
+    &:nth-child(odd) {
+      & {
+        .section-header {
+          h1 {
+            color: $color1;
+          }
+          h2 {
+            color: $color1;
+          }
+        }
+      }
+    }
+
+    &:nth-child(even) {
+      & {
+        .section-header {
+          h1 {
+            color: white;
+          }
+          h2 {
+            color: white;
+          }
+        }
+      }
+    }
+
+    &-header {
+      flex: 1;
+      margin: 1rem 0;
+
+      h2 {
+        display: block;
+      }
+
+      .picture {
+        width: 10rem;
+      }
+    }
+  }
+
+  .full-height {
+    height: fit-content;
+  }
+
+  .profile-wrapper,
+  .skills,
+  .experience,
+  .achievements {
+    padding: 0 1rem;
+    width: 100%;
+    flex: unset;
+  }
+
+  .profile-wrapper {
+    &-section {
+      align-items: center !important;
+
+      .dw-resume {
+        align-self: center;
+      }
+    }
+  }
+
+  .experience {
+    &-wrapper {
+      &-content {
+        .list {
+          padding-left: 1.4rem;
+        }
+      }
+    }
+  }
+
+  .achievements {
+    flex-flow: column wrap;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .section {
+    padding: 1rem 0;
+    &-header {
+      h1 {
+        font-size: $font3;
+      }
+    }
+
+    &-body {
+      padding: 0 0.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 811px) {
+  .section {
+    &:nth-child(even) {
+      .section-header {
+        h1 {
+          @include text-stroke;
+          @include vertical-text;
+          transform: rotate(180deg);
+          -webkit-text-stroke-color: $white;
+        }
+
+        h2 {
+          display: none;
+        }
+      }
+    }
+    &:nth-child(odd) {
+      .section-header {
+        h1 {
+          @include text-stroke;
+          @include vertical-text;
+          transform: rotate(180deg);
+          -webkit-text-stroke-color: $color1;
+        }
+
+        h2 {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .section-subheader {
+    display: block;
+  }
+}

@@ -16,23 +16,20 @@ const SectionHeader = (props) => {
 
   return (
     <div
-      className={`section-header t-top-wrapper ${className}`}
+      className={`section-header ${className} t-top-wrapper`}
       data-func="show"
       data-classname="t-top-transition"
       ref={ref}
     >
       {image && (
         <div className="picture">
-          <Image src={image} alt={alt} />
+          <Image src={image} alt={alt} priority />
         </div>
       )}
       {heading && <h1>{heading}</h1>}
       {text && (
         <>
-          <div className="divider">
-            <span />
-          </div>
-          <h3>{text}</h3>
+          <h2>{text}</h2>
         </>
       )}
     </div>

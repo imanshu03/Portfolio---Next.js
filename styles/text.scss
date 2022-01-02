@@ -1,0 +1,126 @@
+@import './variables.scss';
+
+.text-muted {
+  color: $grey;
+  margin: 0;
+  text-transform: capitalize;
+  font-weight: $light;
+  font-size: $font9;
+}
+
+.text-muted-lg {
+  @extend .text-muted;
+  font-size: $font8;
+}
+
+.text-muted-italic {
+  @extend .text-muted;
+  font-style: italic;
+}
+
+.text-muted-italic-mb {
+  @extend .text-muted-italic;
+  margin-bottom: 0.4rem;
+}
+
+.heading {
+  margin: 0.4rem 0 0 0;
+  font-size: $font5;
+  color: $black;
+  text-transform: capitalize;
+  transition: 0.4s all ease-in-out;
+}
+
+.subtext {
+  margin: 0 0 0.4rem 0;
+  color: $black;
+  text-transform: capitalize;
+  font-weight: $regular;
+  transition: 0.4s all ease-in-out;
+  font-size: $font7;
+}
+
+.subtext-italic {
+  @extend .subtext;
+  font-weight: $light;
+  font-style: italic;
+  font-size: $font8;
+}
+
+.subtext-inline {
+  @extend .subtext;
+  margin: 0 0 0 0.2rem;
+  font-style: italic;
+  font-weight: $light;
+  display: inline-block;
+}
+
+.main-heading {
+  @include text-stroke;
+  @include font-r-3;
+  text-transform: uppercase;
+}
+
+.typewriter-text {
+  margin: 0;
+  color: $color1;
+  letter-spacing: 0.2rem;
+  font-weight: $light;
+  font-size: calc(1.2rem + 1vw);
+}
+
+.para-text {
+  text-align: justify;
+  color: $grey;
+  font-size: $font8;
+  font-weight: $light;
+  line-height: 2;
+
+  span {
+    display: block;
+    margin-bottom: 1rem;
+  }
+}
+
+.para-text-0m {
+  @extend .para-text;
+  margin: 0;
+}
+
+.list-item-text {
+  margin-bottom: 0.6rem;
+  font-size: $font8;
+  text-align: justify;
+  color: $grey;
+  line-height: 1.2;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 810px) {
+  .heading {
+    font-size: $font6;
+  }
+
+  .subtext {
+    font-size: $font8;
+  }
+  .subtext-inline {
+    display: block;
+    margin: 0 0 0.4rem 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .para-text {
+    font-size: $font8;
+  }
+  .subtext {
+    font-size: $font9;
+  }
+  .para-text {
+    line-height: 1.6;
+    span {
+      margin: 0 0 0.6rem 0;
+    }
+  }
+}

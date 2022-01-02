@@ -1,0 +1,42 @@
+@import './variables.scss';
+
+.footer-cta {
+  background-color: $white !important;
+  display: block;
+  padding: 1rem 0;
+
+  button {
+    margin: 1rem auto;
+    padding: 1rem;
+    @include gradient;
+    border: none;
+    outline: none;
+    color: $white;
+    cursor: pointer;
+
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.6s opacity ease-in-out, 0.6s left ease-in-out,
+      0.6s top ease-in-out, 0.2s transform ease-in-out !important;
+
+    @media (hover: hover) {
+      & {
+        &:hover {
+          transform: scale(1.04);
+        }
+        &:active {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer-cta {
+    margin-bottom: 3rem;
+  }
+}

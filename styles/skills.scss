@@ -6,45 +6,105 @@
   &-section {
     margin: 1rem 0;
 
-    h1 {
-      color: $white;
-      margin: 0;
-      text-transform: capitalize;
-      transition: 0.2s color ease-in-out, 0.6s opacity ease-in-out,
-        0.6s left ease-in-out, 0.6s top ease-in-out;
-    }
-
     &-wrapper {
       display: flex;
       flex-flow: row wrap;
       align-items: center;
+      justify-content: space-evenly;
 
       .skill-box {
-        flex: auto;
         text-align: center;
-        padding: 0.6rem 1rem;
-        background-color: white;
-        border-radius: 6px;
-        margin: 1rem 1.2rem 0 0;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        margin: 1rem 0;
         transition: 0.6s opacity ease-in-out, 0.6s left ease-in-out,
-          0.6s top ease-in-out, 0.2s transform ease-in-out,
-          0.2s color ease-in-out, 0.2s background-color ease-in-out;
+          0.6s top ease-in-out;
+        position: relative;
+        box-sizing: border-box;
+        overflow: hidden;
+        background-color: transparent;
+        cursor: pointer;
+        width: 9rem;
+        height: 9rem;
+        margin: 0.6rem 0.4rem;
 
-        span {
-          @include gradient-text;
-          letter-spacing: 1px;
-          text-transform: capitalize;
+        &-icon {
+          position: relative;
+          padding: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          transition: 0.4s transform ease-in-out;
+          transform: translateY(-1.2rem);
+
+          svg {
+            width: 60%;
+            height: 60%;
+          }
+        }
+
+        &-icon-text {
+          padding: 0.2rem;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          color: $white;
+          box-sizing: border-box;
+          transition: 0.4s all ease-in-out;
+          background-color: rgba(white, 0.04);
+          font-weight: 300;
+        }
+
+        &-text {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          background-color: rgba(white, 0.04);
+          font-weight: 300;
         }
 
         @media (hover: hover) {
           & {
+            &-icon {
+              transform: translateY(0);
+            }
+            &-icon-text {
+              top: 9rem;
+              background-color: transparent;
+            }
             &:hover {
-              transform: scale(1.05);
+              .skill-box-icon {
+                transform: translateY(-1.2rem);
+              }
+
+              .skill-box-icon-text {
+                background-color: rgba(white, 0.04);
+                top: 0;
+              }
             }
           }
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .skill-box {
+    width: 7rem !important;
+    height: 7rem !important;
+
+    &-icon-text,
+    &-text {
+      font-size: $font9;
+      font-weight: $light;
     }
   }
 }

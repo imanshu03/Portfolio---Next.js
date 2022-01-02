@@ -3,7 +3,6 @@
 .timeline {
   padding-right: 1rem;
   width: 2rem;
-  height: 100%;
   position: relative;
 
   .dot {
@@ -16,7 +15,7 @@
     position: absolute;
     z-index: 1;
     box-sizing: content-box;
-    transition: 0.4s 0.2s all ease-in-out;
+    transition: 0.4s all ease-in-out;
   }
 
   .line {
@@ -26,7 +25,7 @@
     position: absolute;
     left: 7px;
     top: 15px;
-    transition: 0.4s 0.2s all ease-in-out;
+    transition: 0.4s all ease-in-out;
   }
 
   .last-line {
