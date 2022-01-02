@@ -12,7 +12,7 @@ const BackToTop = () => {
 
   return (
     <div className="footer-cta">
-      <FragmentLeft props={{ onClick: scrollToTop }} tagName="button">
+      <FragmentLeft onClick={scrollToTop} tagName="button">
         Back to top&ensp;
         <UpIcon />
       </FragmentLeft>

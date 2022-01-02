@@ -36,8 +36,6 @@ export default function Home({ data }) {
       {data && (
         <div id="app">
           <ScrollProgress />
-          <div />
-          {/* <ConnectBox data={data.socialLinks} /> */}
           <ObserverStore>
             <Profile data={data.profile} />
             <Skills data={data.skills} />

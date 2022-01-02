@@ -1,33 +1,5 @@
 {
   "pageTitle": "Imanshu Rathore's - Resume",
-  "socialLinks": [
-    {
-      "icon": "MailIcon",
-      "value": "imanshurathore@gmail.com",
-      "link": true,
-      "href": "mailto:imanshurathore@gmail.com"
-    },
-    {
-      "icon": "MobileIcon",
-      "value": "7837770661",
-      "link": true,
-      "href": "tel:+91-7837770661"
-    },
-    {
-      "icon": "LinkedinIcon",
-      "value": "linkedin.com/in/imanshurathore/",
-      "link": true,
-      "href": "https://www.linkedin.com/in/imanshurathore/",
-      "target": "_blank"
-    },
-    {
-      "icon": "GithubIcon",
-      "value": "github.com/imanshu03",
-      "link": true,
-      "href": "https://github.com/imanshu03",
-      "target": "_blank"
-    }
-  ],
   "profile": {
     "firstName": "imanshu",
     "lastName": "rathore",
@@ -42,7 +14,39 @@
       "If I am not working then there is a high chance that I am busy potting pool balls with my cue or leading my player for a Winner Winner Chicken Dinner!",
       "Scroll down to know more about me!"
     ],
-    "resume": "https://drive.google.com/uc?id=11rcKwVOYSRMLk8Hz1wmp2TVn3OfGOOqg&export=download"
+    "resume": "https://drive.google.com/uc?id=11rcKwVOYSRMLk8Hz1wmp2TVn3OfGOOqg&export=download",
+    "socialLinks": [
+      {
+        "icon": "MailIcon",
+        "value": "imanshurathore@gmail.com",
+        "link": true,
+        "href": "mailto:imanshurathore@gmail.com",
+        "alt": "email"
+      },
+      {
+        "icon": "MobileIcon",
+        "value": "7837770661",
+        "link": true,
+        "href": "tel:+91-7837770661",
+        "alt": "mobile"
+      },
+      {
+        "icon": "LinkedinIcon",
+        "value": "linkedin.com/in/imanshurathore/",
+        "link": true,
+        "href": "https://www.linkedin.com/in/imanshurathore/",
+        "target": "_blank",
+        "alt": "linkedin"
+      },
+      {
+        "icon": "GithubIcon",
+        "value": "github.com/imanshu03",
+        "link": true,
+        "href": "https://github.com/imanshu03",
+        "target": "_blank",
+        "alt": "github"
+      }
+    ]
   },
   "skills": [
     { "text": "React.js", "icon": "ReactIcon" },

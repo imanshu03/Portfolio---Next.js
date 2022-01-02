@@ -41,34 +41,56 @@ a {
   mix-blend-mode: multiply;
 }
 
-// connect box
 #social-links {
-  position: fixed;
-  left: 0;
-  bottom: 0;
   display: flex;
+  width: inherit;
   flex-flow: row wrap;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 0.4rem;
-  color: $color1;
-  z-index: 100;
-  mix-blend-mode: multiply;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+  margin-top: 2rem;
 
-  & > span {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: $color2;
-  }
-
-  .social-links-wrapper {
+  a {
+    text-decoration: none;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row;
     align-items: center;
     justify-content: center;
+    margin: 0.2rem 0;
 
+    .link-text {
+      margin-left: 0.4rem;
+      color: $color1;
+    }
+
+    svg {
+      * {
+        fill: $color1;
+      }
+    }
+
+    @media (hover: hover) {
+      & {
+        transition: 0.4s all ease-in-out;
+        &:hover {
+          transform: scale(1.04);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #social-links {
     a {
-      margin-left: 0.5rem;
+      .link-text {
+        display: none;
+      }
+
+      svg {
+        width: 1.4rem;
+        height: 1.4rem;
+      }
     }
   }
 }

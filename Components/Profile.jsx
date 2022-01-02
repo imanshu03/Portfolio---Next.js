@@ -2,9 +2,10 @@ import React, { useContext, useEffect, useRef, useState } from 'react';
 import { ObserverContext } from '../ObserverStore';
 import SectionHeader from './SubComponents/SectionHeader';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
-import ProfileImg from '../Assets/profile.jpg';
+import ProfileImg from '../Assets/profile.webp';
 import DownloadIcon from '../Assets/file-earmark-arrow-down.svg';
 import Loader from 'react-loader-spinner';
+import ConnectBox from './ConnectBox';
 import FragmentLeft from './FragmentLeft';
 
 const downloadResume = function (resume) {
@@ -85,6 +86,7 @@ const Profile = ({ data }) => {
             </button>
           )}
         </FragmentLeft>
+        <ConnectBox data={data.socialLinks} />
       </div>
     </div>
   );

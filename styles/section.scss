@@ -93,7 +93,7 @@
 
 // even - odd
 .section {
-  &:nth-child(odd) {
+  &:nth-child(even) {
     background-color: transparent;
 
     & {
@@ -129,7 +129,7 @@
     }
   }
 
-  &:nth-child(even) {
+  &:nth-child(odd) {
     @include gradient;
 
     .section-subheader {

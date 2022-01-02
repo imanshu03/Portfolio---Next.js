@@ -47,7 +47,7 @@
       }
     }
 
-    &:nth-child(odd) {
+    &:nth-child(even) {
       & {
         .section-header {
           h1 {
@@ -60,7 +60,7 @@
       }
     }
 
-    &:nth-child(even) {
+    &:nth-child(odd) {
       & {
         .section-header {
           h1 {
