@@ -27,7 +27,11 @@ const SectionHeader = (props) => {
         </div>
       )}
       {heading && <h1>{heading}</h1>}
-      {text && <h2>{text}</h2>}
+      {text && (
+        <>
+          <h2>{text}</h2>
+        </>
+      )}
     </div>
   );
 };

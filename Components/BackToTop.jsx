@@ -4,7 +4,7 @@ import FragmentLeft from './FragmentLeft';
 
 const BackToTop = () => {
   const scrollToTop = () => {
-    document.getElementById('app').scrollTo({
+    document.documentElement.scrollTo({
       top: 0,
       behavior: 'smooth',
     });

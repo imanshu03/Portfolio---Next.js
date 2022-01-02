@@ -4,19 +4,19 @@ const ScrollProgress = () => {
   const [width, setWidth] = useState(0);
 
   useEffect(() => {
-    function handleScroll(app) {
-      let y = Math.ceil(app.scrollY);
-      let maxY = Math.ceil(app.scrollMaxY);
-      const per = 100 - ((maxY - y) / maxY) * 100;
-      setWidth(per);
+    function handleScroll() {
+      const winScroll = document.documentElement.scrollTop;
+      const height =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      const scrolled = (winScroll / height) * 100;
+
+      setWidth(scrolled);
     }
-    document.documentElement.addEventListener(
-      'scroll',
-      handleScroll.bind(this, document.documentElement),
-    );
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      app.removeEventListener('scroll', handleScroll);
-      app.removeEventListener('touchmove', handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
