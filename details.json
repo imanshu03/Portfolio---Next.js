@@ -9,7 +9,7 @@
       "JavaScript Developer"
     ],
     "description": [
-      "I'm a software engineer with more than 2 years of experience in software development. I believe in developing modern, reactive and user friendly web applications using the latest technologies.",
+      "I'm a software engineer with more than 2.5 years of experience in software development. I believe in developing modern, reactive and user friendly web applications using the latest technologies.",
       "I believe a perfect blend of software design is one, where the goals and needs are accounted for in an elegant, efficient and robust design of the software.",
       "If I am not working then there is a high chance that I am busy potting pool balls with my cue or leading my player for a Winner Winner Chicken Dinner!",
       "Scroll down to know more about me!"
@@ -69,6 +69,7 @@
     {
       "company": "paytm payments bank",
       "startDate": "February, 2021",
+      "endDate": "February, 2022",
       "designation": "software engineer",
       "location": "Noida, India",
       "responsibilities": [
