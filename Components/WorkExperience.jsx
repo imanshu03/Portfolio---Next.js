@@ -1,8 +1,23 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
+import Image from 'next/image';
+import * as CompanyImgs from '../Assets/Company';
 import SectionHeader from './SubComponents/SectionHeader';
 import Timeline from './SubComponents/Timeline';
 import FragmentLeft from './FragmentLeft';
 import SectionSubHeader from './SubComponents/SectionSubHeader';
+
+function fetchIcon(iconName = '') {
+  const imgSrc = CompanyImgs[iconName];
+  if (imgSrc) {
+    return (
+      <div className="headline-wrapper-icon">
+        <Image src={imgSrc} alt={iconName} />
+      </div>
+    );
+  }
+  return null;
+}
 
 const WorkExperience = ({ data }) => {
   return (
@@ -14,13 +29,20 @@ const WorkExperience = ({ data }) => {
           <div className="experience-wrapper" key={idx}>
             <Timeline isLast={idx === data.length - 1} />
             <FragmentLeft className="experience-wrapper-content">
-              <p className="text-muted-italic">
-                {exp.startDate} - {exp.endDate || 'Present'}
-              </p>
-              <h2 className="heading">{exp.designation}</h2>
-              <h3 className="subtext">{exp.company}</h3>
-              <p className="text-muted-italic-mb">{exp.location}</p>
-              {exp.responsibilities && (
+              <div className="headline-wrapper">
+                {exp.icon && fetchIcon(exp.icon)}
+                <div className="headline-wrapper-details">
+                  <p className="text-muted-italic">
+                    {exp.startDate} - {exp.endDate || 'Present'}
+                  </p>
+                  <h2 className="heading">{exp.designation}</h2>
+                  <h3 className="subtext">{exp.company}</h3>
+                </div>
+              </div>
+              {exp.location && (
+                <p className="text-muted-italic-mb">{exp.location}</p>
+              )}
+              {exp.responsibilities ? (
                 <>
                   <p className="text-muted-italic">Responsibilties:</p>
                   <ul className="list">
@@ -31,7 +53,10 @@ const WorkExperience = ({ data }) => {
                     ))}
                   </ul>
                 </>
+              ) : (
+                <br />
               )}
+              <br />
             </FragmentLeft>
           </div>
         ))}

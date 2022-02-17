@@ -69,11 +69,13 @@
      {
       "company": "disney+ hotstar",
       "startDate": "February, 2022",
-      "designation": "software development engineer ||",
-      "location": "Gurugram, India"
+      "designation": "Software Development Engineer 2",
+      "location": "Gurugram, India",
+      "icon": "hotstar"
     },
     {
       "company": "paytm payments bank",
+      "icon": "ppbl",
       "startDate": "February, 2021",
       "endDate": "February, 2022",
       "designation": "software engineer",
@@ -89,6 +91,7 @@
     },
     {
       "company": "GlobalLogic",
+      "icon": "gl",
       "startDate": "October, 2019",
       "endDate": "January, 2021",
       "designation": "associate software engineer",
