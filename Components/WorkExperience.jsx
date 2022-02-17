@@ -12,7 +12,7 @@ function fetchIcon(iconName = '') {
   if (imgSrc) {
     return (
       <div className="headline-wrapper-icon">
-        <Image src={imgSrc} alt={iconName} />
+        <Image src={imgSrc} alt={iconName} priority />
       </div>
     );
   }
