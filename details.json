@@ -78,7 +78,7 @@
         "Develop reusable and modular UI components utilizing Preact and Storybook, define accessibility and governance and rollout the components across the Paytm Web Components library.",
         "Enhanced overall web application performance by optimizing the critical rendering path, reducing page load time and improving performance metrics such as FCP, FMP and TTI etc from 82% to 90%.",
         "Handling the interface layer (Backend For Frontend) for integrating/tailoring the distributed multi microservice architecture with the web-application and achieving a combination of static side generation and server side rendering.",
-        "Improved web application security by composing middleware’s to prevent various attacks such as CSRF, XSS, CSP and Click-Jacking etc which diminshed the attacks from 7% to 4.2%.",
+        "Improved web application security by composing middleware’s to prevent various attacks such as CSRF, XSS, CSP and Click-Jacking etc which diminished the attacks from 7% to 4.2%.",
         "Collaborate with team to design, develop, test and refine expected deliverables that meet the objectives and quality standards across multiple releases."
       ]
     },
