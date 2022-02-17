@@ -23,7 +23,7 @@ const SectionHeader = (props) => {
     >
       {image && (
         <div className="picture">
-          <Image src={image} alt={alt} priority />
+          <Image src={image} alt={alt} loading="lazy" />
         </div>
       )}
       {heading && <h1>{heading}</h1>}
