@@ -66,13 +66,6 @@
     { "text": "Data Structures & Algorithms", "icon": null }
   ],
   "workExperience": [
-     {
-      "company": "disney+ hotstar",
-      "startDate": "February, 2022",
-      "designation": "Software Development Engineer 2",
-      "location": "Gurugram, India",
-      "icon": "hotstar"
-    },
     {
       "company": "paytm payments bank",
       "icon": "ppbl",
