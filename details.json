@@ -66,6 +66,12 @@
     { "text": "Data Structures & Algorithms", "icon": null }
   ],
   "workExperience": [
+     {
+      "company": "disney+ hotstar",
+      "startDate": "February, 2022",
+      "designation": "software development engineer ||",
+      "location": "Gurugram, India",
+    },
     {
       "company": "paytm payments bank",
       "startDate": "February, 2021",
